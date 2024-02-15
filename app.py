@@ -144,7 +144,20 @@ def handle_task_10_3_5():
         if bearer_token in valid_tokens:
             return 'gooooood!'
 
-    return 'permission denied', 300
+# currency_exchange
+# Обработчик POST запросов
+@app.route('/api/currency_exchange', methods=['GET'])
+def currency_exchange():
+    data = {
+        "USD": 1.15,
+        "EUR": 1.0,
+        "GBP": 0.88,
+        "JPY": 129.5,
+        "AUD": 1.62,
+        "CAD": 1.48,
+        "CHF": 1.08
+    }
+    return jsonify(data)
 
 
 
